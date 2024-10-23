@@ -44,10 +44,11 @@ A justificativa do projeto está baseada na necessidade de suporte educacional e
 ## Fotos e prints
 
 ## Prints da tela do projeto
-! [tela inicial] (![previa do site](https://github.com/user-attachments/assets/61113016-051c-45cf-af69-8ec90571f560)
+! [tela inicial] (!![tela inicial](https://github.com/user-attachments/assets/10c90bbe-5184-43d4-9f7a-03bb4e3b8263)
+
 
 ## Pevia do site
-! [previa site] (!![tela inicial](https://github.com/user-attachments/assets/10c90bbe-5184-43d4-9f7a-03bb4e3b8263)
+! [previa site] (![previa do site](https://github.com/user-attachments/assets/4a97147c-aa77-44de-a36e-535df662d4fa)
 
 
 
