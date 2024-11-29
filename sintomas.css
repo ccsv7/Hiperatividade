@@ -1,0 +1,71 @@
+/* Sintomas - CSS Futurístico */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #1e1e1e; /* Fundo escuro */
+    color: #e0e0e0; /* Texto claro */
+}
+
+.hero-section {
+    background: linear-gradient(to right, #e67e22, #d35400);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #e67e22;
+}
+
+/* Estilos para o botão de voltar */
+.hero-content .btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    background-color: #e67e22; /* Cor laranja */
+    color: white;
+    transition: all 0.3s ease;
+    border: none; /* Remover borda */
+    text-transform: uppercase; /* Texto em maiúsculas */
+}
+
+.hero-content .btn:hover {
+    background-color: #d35400; /* Muda a cor ao passar o mouse */
+    transform: scale(1.1); /* Aumenta ligeiramente o botão ao hover */
+}
+
+

@@ -1,0 +1,99 @@
+/* Diagnóstico - CSS Futurístico */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #34495e; /* Fundo escuro */
+    color: #ecf0f1; /* Texto claro */
+}
+
+.hero-section {
+    background: linear-gradient(to right, #8e44ad, #9b59b6);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Posiciona o conteúdo mais para cima */
+    color: white;
+    text-align: center;
+    padding-top: 200px; /* Ajusta a distância do topo */
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    text-shadow: 0 0 10px #8e44ad, 0 0 20px #9b59b6;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+}
+
+h2 {
+    color: #8e44ad;
+    text-shadow: 0 0 5px #8e44ad;
+}
+
+/* Estilos para o botão de voltar */
+.hero-content .btn,
+.btn-primary {
+    padding: 15px 40px; /* Aumenta o comprimento do botão */
+    font-size: 1.1rem;
+    border-radius: 30px;
+    background-color: #8e44ad; /* Cor roxa */
+    color: white;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    border: none;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px #8e44ad, 0 0 15px #3b0453;
+}
+
+.btn-primary:hover,
+.btn-outline-light:hover {
+    background-color: #3b0453;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #8e44ad, 0 0 25px #3b0453;
+}
+
+a.btn.btn-primary {
+    margin: 20px auto; /* Reduz o espaçamento inferior */
+    display: flex;
+    justify-content: center;
+    width: 350px; /* Aumenta o comprimento do botão */
+    margin-bottom: 100px;
+    margin-top: 0px;
+}
+
+.text-center.mb-4{
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.container.py-5{
+    padding-bottom: 0px;
+}
+
+.text-center{
+    margin-bottom:40px;
+}

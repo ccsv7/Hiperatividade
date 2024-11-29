@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pré-diagnóstico de TDAH</title>
+    <link rel="stylesheet" href="pré.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pré-diagnóstico de TDAH</h1>
+        <p>Responda as perguntas abaixo com "Sim" ou "Não".</p>
+        <form method="POST" id="tdahForm">
+            <label for="foco">Você tem dificuldade frequente em manter o foco em atividades ou conversas?</label>
+            <select id="foco" name="foco">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+
+            <label for="tarefas">Você costuma evitar ou procrastinar tarefas que exigem esforço mental contínuo?</label>
+            <select id="tarefas" name="tarefas">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+
+            <label for="inquietacao">Você frequentemente sente inquietação ou necessidade de se mover constantemente?</label>
+            <select id="inquietacao" name="inquietacao">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+
+            <label for="impulsividade">Você age impulsivamente, tomando decisões rápidas sem pensar nas consequências?</label>
+            <select id="impulsividade" name="impulsividade">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+
+            <label for="distracao">Você se distrai facilmente com estímulos externos ou com seus próprios pensamentos?</label>
+            <select id="distracao" name="distracao">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+
+            <label for="organizacao">Você tem dificuldade em se organizar e planejar suas atividades diárias?</label>
+            <select id="organizacao" name="organizacao">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+
+            <label for="atrasos">Você frequentemente perde compromissos ou chega atrasado por falta de organização?</label>
+            <select id="atrasos" name="atrasos">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+
+            <label for="memoria">Você tem dificuldade em lembrar de compromissos ou tarefas a serem realizadas?</label>
+            <select id="memoria" name="memoria">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+
+            <label for="desanimo">Você frequentemente se sente frustrado ou desanimado por não conseguir completar tarefas importantes?</label>
+            <select id="desanimo" name="desanimo">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+
+            <label for="autocontrole">Você tem dificuldade em controlar suas emoções, especialmente em situações estressantes?</label>
+            <select id="autocontrole" name="autocontrole">
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div id="resultado" class="hidden">
+            <h2>Resultado do Pré-diagnóstico</h2>
+            <p id="diagnostico"></p>
+            <button onclick="voltar()">Voltar à Página Inicial</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("tdahForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const respostas = {
+                foco: document.getElementById("foco").value,
+                tarefas: document.getElementById("tarefas").value,
+                inquietacao: document.getElementById("inquietacao").value,
+                impulsividade: document.getElementById("impulsividade").value,
+                distracao: document.getElementById("distracao").value,
+                organizacao: document.getElementById("organizacao").value,
+                atrasos: document.getElementById("atrasos").value,
+                memoria: document.getElementById("memoria").value,
+                desanimo: document.getElementById("desanimo").value,
+                autocontrole: document.getElementById("autocontrole").value
+            };
+
+            let pontos = 0;
+
+            for (let key in respostas) {
+                if (respostas[key] === "Sim") {
+                    pontos++;
+                }
+            }
+
+            const diagnostico = document.getElementById("diagnostico");
+            const resultadoDiv = document.getElementById("resultado");
+
+            if (pontos >= 7) {
+                diagnostico.innerText = "Os resultados sugerem que você pode ter indicadores de TDAH. Procure um profissional de saúde para um diagnóstico completo.";
+            } else {
+                diagnostico.innerText = "Os resultados não sugerem um possível TDAH, mas se você ainda tiver dúvidas, é recomendável consultar um profissional de saúde.";
+            }
+
+            resultadoDiv.classList.remove("hidden");
+        });
+
+        function voltar() {
+            window.location.href = 'file:///C:/Users/CHRYSTIANCORVELODASI/Downloads/Impacto%20Hiperativo/site%20feira/index.html'; // Altere para o URL da sua página inicial
+        }
+    </script>
+</body>
+</html>
